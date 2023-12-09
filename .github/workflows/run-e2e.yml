@@ -37,12 +37,15 @@ jobs:
         name: Cache Cypress binary
         with:
           path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-cypress-13.6.1-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-cypress-
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Install Cypress
+        run: pnpm exec cypress install
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
