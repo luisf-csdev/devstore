@@ -57,4 +57,4 @@ jobs:
           start: pnpm start
         env:
           APP_URL: "http://localhost:3000"
-          NEXT_PUBLIC_API_BASE_URL: "https://devstore-api-sooty.vercel.app/"
+          NEXT_PUBLIC_API_BASE_URL: "https://devstore-api-indol.vercel.app/"
