@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-cypress-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Install Cypress
         run: pnpm exec cypress install
